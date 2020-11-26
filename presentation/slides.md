@@ -132,3 +132,98 @@ Classement des design patterns par famille et par scope
 
 ![alt text](./imgs/dp_classification.jpg)
 
+---
+
+# Structural Patterns
+
+## Adapter Pattern
+
+### Motivation
+
+The adapter pattern is adapting between classes and objects. Like any adapter in the real world it is used to be an interface, a bridge between two objects
+
+### Intent
+
+- Convert the interface of a class into another interface clients expect.
+- Adapter lets classes work together, that could not otherwise because of incompatible interfaces.
+
+![](./imgs/adapter_uml.png)
+
+---
+
+# Adapter Pattern
+
+- Can be implemented with inheritance (thus, a Class Pattern)
+- Can be implemented with composition and delegation (thus, an Object Pattern)
+
+See the two ways of solving the PhoneList example
+
+---
+
+# Decorator Pattern
+
+## Motivation
+
+Extending an object's functionality can be done statically (at compile time) by using inheritance however it might be necessary to extend an object's functionality dynamically (at runtime) as an object is used.
+
+## Intent
+
+The intent of this pattern is to add additional responsibilities dynamically to an object.
+
+![](./imgs/decorator_uml.png)
+
+---
+
+# Decorator
+
+- See the example in `./examples/DecoratorExample`
+- Do the exercise in `./exercises/DecoratorExercise`
+
+---
+
+# Bridge
+
+## Motivation
+
+Sometimes an abstraction should have different implementations; consider an object that handles persistence of objects over different platforms using either relational databases or file system structures (files and folders). A simple implementation might choose to extend the object itself to implement the functionality for both file system and RDBMS. However this implementation would create a problem; Inheritance binds an implementation to the abstraction and thus it would be difficult to modify, extend, and reuse abstraction and implementation independently.
+
+
+## Intent
+
+The intent of this pattern is to decouple abstraction from implementation so that the two can vary independently
+
+![](./imgs/bridge_uml.png)
+
+---
+
+# Bridge
+
+- See the example in `./examples/BridgeExample`
+- Do the exercise in `./exercises/BridgeExercises`
+
+---
+
+# Proxy
+
+# Motivation
+
+Sometimes we need the ability to control the access to an object.
+
+The proxy design pattern is used to provide a surrogate or placeholder object, which references an underlying object. The proxy provides the same public interface as the underlying subject class. It adds a level of indirection by accepting requests from a client object and passing these to the real subject object as necessary
+
+# Intent
+
+The intent of this pattern is to provide a Placeholder for an object to control references to it
+
+![](./imgs/proxy_uml.png)
+
+---
+
+# Proxy
+
+## Types of proxies
+
+- Cache Proxy : A cache proxy improves the performance of the underlying object's.
+- Protection Proxy : A protection proxy adds a layer of security to the underlying subject object. 
+- Remote Proxy : A remote proxy provides a local object that references a subject object in another location, generally via a network connection.
+- Smart Proxy : Smart proxies add extra functionality to the calls to the real object's members.  (examples : logging, counting…)

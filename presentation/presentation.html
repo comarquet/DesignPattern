@@ -1311,7 +1311,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/9
+              1/14
             </aside>
           </footer>
         </div>
@@ -1347,7 +1347,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/9
+              2/14
             </aside>
           </footer>
         </div>
@@ -1396,7 +1396,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              3/9
+              3/14
             </aside>
           </footer>
         </div>
@@ -1436,7 +1436,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              4/9
+              4/14
             </aside>
           </footer>
         </div>
@@ -1474,7 +1474,7 @@ complément du cours).</p>
             </aside>
             
             <aside class="page_number">
-              5/9
+              5/14
             </aside>
           </footer>
         </div>
@@ -1487,6 +1487,15 @@ complément du cours).</p>
             
             <header><h1>Commençons par un exemple concret</h1></header>
             
+            
+            <section><p>We have a program that displays the names and phones of a list of people. We rely on an interface <code>PhoneListInterface</code> that defines
+a methode <code>Array&lt;Phone&gt; getPhoneList()</code>, the object <code>Phone</code> is one of our classes.</p>
+<p>Depending on an interface instead of an concrete implementation is a way of observing the "Dependency inversion principle" of SOLID principles. This
+way we can easily use different implementations as our needs evolve.</p>
+<p>Currently, we use an implementation provided by a third party library (that means, we can't edit the code ourselves). The implementions provides a class
+<code>PersonnelPhoneGetter</code> which implements a method <code>Array&lt;Array&lt;String&gt;&gt; getPersonnelPhones()</code>.</p>
+<p>It does what we want, but the signature of the method doesn't match with our interface (different method name &amp; different way of formatting the data).</p>
+<p>We solve this problem by writting a class to make some "translation" between the two piece of softwares, which we call <code>PhoneListAdapter</code>.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1502,7 +1511,7 @@ complément du cours).</p>
             </aside>
             
             <aside class="page_number">
-              6/9
+              6/14
             </aside>
           </footer>
         </div>
@@ -1537,7 +1546,7 @@ complément du cours).</p>
             </aside>
             
             <aside class="page_number">
-              7/9
+              7/14
             </aside>
           </footer>
         </div>
@@ -1571,7 +1580,7 @@ complément du cours).</p>
             </aside>
             
             <aside class="page_number">
-              8/9
+              8/14
             </aside>
           </footer>
         </div>
@@ -1602,7 +1611,180 @@ complément du cours).</p>
             </aside>
             
             <aside class="page_number">
-              9/9
+              9/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h1>Structural Patterns</h1></header>
+            
+            
+            <section><h2>Adapter Pattern</h2>
+<h3>Motivation</h3>
+<p>The adapter pattern is adapting between classes and objects. Like any adapter in the real world it is used to be an interface, a bridge between two objects</p>
+<h3>Intent</h3>
+<ul>
+<li>Convert the interface of a class into another interface clients expect.</li>
+<li>Adapter lets classes work together, that could not otherwise because of incompatible interfaces.</li>
+</ul>
+<p><img alt="" src="data:image/png;base64,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" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-11">
+          <div class="inner">
+            
+            <header><h1>Adapter Pattern</h1></header>
+            
+            
+            <section><ul>
+<li>Can be implemented with inheritance (thus, a Class Pattern)</li>
+<li>Can be implemented with composition and delegation (thus, an Object Pattern)</li>
+</ul>
+<p>See the two ways of solving the PhoneList example</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h1>Decorator Pattern</h1></header>
+            
+            
+            <section><h2>Motivation</h2>
+<p>Extending an object's functionality can be done statically (at compile time) by using inheritance however it might be necessary to extend an object's functionality dynamically (at runtime) as an object is used.</p>
+<h2>Intent</h2>
+<p>The intent of this pattern is to add additional responsibilities dynamically to an object.</p>
+<p><img alt="" src="data:image/png;base64,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" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+            
+            <header><h1>Decorator</h1></header>
+            
+            
+            <section><ul>
+<li>See the example in <code>./examples/DecoratorExample</code></li>
+<li>Do the exercise in <code>./exercises/DecoratorExercise</code></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+            
+            <header><h1>Bridge</h1></header>
+            
+            
+            <section><h2>Motivation</h2>
+<p>Sometimes an abstraction should have different implementations; consider an object that handles persistence of objects over different platforms using either relational databases or file system structures (files and folders). A simple implementation might choose to extend the object itself to implement the functionality for both file system and RDBMS. However this implementation would create a problem; Inheritance binds an implementation to the abstraction and thus it would be difficult to modify, extend, and reuse abstraction and implementation independently.</p>
+<h2>Intent</h2>
+<p>The intent of this pattern is to decouple abstraction from implementation so that the two can vary independently</p>
+<p><img alt="" src="data:image/png;base64,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" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/14
             </aside>
           </footer>
         </div>
@@ -1667,6 +1849,36 @@ complément du cours).</p>
       <tr id="toc-row-9">
         <th><a href="#slide9">Tableau récapitulatif</a></th>
         <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Structural Patterns</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Adapter Pattern</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Decorator Pattern</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">Decorator</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">Bridge</a></th>
+        <td><a href="#slide14">14</a></td>
       </tr>
       
       
