@@ -1,5 +1,5 @@
 package com.company;
 
-public interface IContainer {
+public interface IIterableCollection {
     public IIterator getIterator();
 }

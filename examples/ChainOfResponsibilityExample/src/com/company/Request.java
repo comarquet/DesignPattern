@@ -2,10 +2,8 @@ package com.company;
 
 public class Request {
     private int value;
-    private String description;
 
-    public Request(String description, int value) {
-        this.description = description;
+    public Request(int value) {
         this.value = value;
     }
 
@@ -13,7 +11,4 @@ public class Request {
         return value;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

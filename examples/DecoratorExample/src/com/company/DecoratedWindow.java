@@ -4,14 +4,14 @@ public class DecoratedWindow implements Window {
     /**
      * private reference to the window being decorated
      */
-    private Window privateWindowRefernce = null;
+    private Window privateWindowReference = null;
 
     public DecoratedWindow(Window windowRefernce) {
-        this.privateWindowRefernce = windowRefernce;
+        this.privateWindowReference = windowRefernce;
     }
 
     @Override
     public void renderWindow() {
-        privateWindowRefernce.renderWindow();
+        privateWindowReference.renderWindow();
     }
 }

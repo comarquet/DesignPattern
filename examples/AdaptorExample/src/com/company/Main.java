@@ -16,5 +16,10 @@ public class Main {
         // The code below doesn't work
         //ContactsPrinter.printContacts(new ContactsLibrary());
 
+        //ContactsLibrary contactsLibrary = new ContactsLibrary();
+        ContactsLibraryAdapter adapter = new ContactsLibraryAdapter();
+
+        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
+        contactsPrinter.printContacts();
     }
 }

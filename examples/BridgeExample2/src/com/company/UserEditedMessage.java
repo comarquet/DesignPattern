@@ -3,7 +3,7 @@ package com.company;
 public class UserEditedMessage extends Message {
     private String userComments;
 
-    public UserEditedMessage(MessageSenderBase messageSender, String title, String body, int importance, String userComments) {
+    public UserEditedMessage(AbstractMessageSender messageSender, String title, String body, int importance, String userComments) {
         super(messageSender, title, body, importance);
         this.userComments = userComments;
     }

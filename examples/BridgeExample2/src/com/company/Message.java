@@ -3,14 +3,14 @@ package com.company;
 public class Message {
 
 
-    protected MessageSenderBase messageSender;
+    protected AbstractMessageSender messageSender;
     protected String title;
     protected String body;
     protected int importance;
 
 
 
-    public Message(MessageSenderBase messageSender, String title, String body, int importance) {
+    public Message(AbstractMessageSender messageSender, String title, String body, int importance) {
         this.messageSender = messageSender;
         this.title = title;
         this.body = body;
@@ -27,11 +27,11 @@ public class Message {
         this.messageSender.SendMessage(this.title, this.body, this.importance);
     };
 
-    public MessageSenderBase getMessageSender() {
+    public AbstractMessageSender getMessageSender() {
         return messageSender;
     }
 
-    public void setMessageSender(MessageSenderBase messageSender) {
+    public void setMessageSender(AbstractMessageSender messageSender) {
         this.messageSender = messageSender;
     }
 }

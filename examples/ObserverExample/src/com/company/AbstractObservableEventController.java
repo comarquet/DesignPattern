@@ -13,9 +13,9 @@ public abstract class AbstractObservableEventController {
         this.observers.remove(observer);
     }
 
-    public void notifyObservers(String event) {
+    public void notifyObservers() {
         for (EventObserver observer : observers) {
-            observer.update(event);
+            observer.update(this);
         }
     }
 }

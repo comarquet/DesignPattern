@@ -11,6 +11,8 @@ public class Main {
         EventObserver logger = new EventLogger();
         eventController.attach(logger);
 
+
+
         eventController.sendEvent("Message with two observers.");
     }
 }

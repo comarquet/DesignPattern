@@ -3,9 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        MessageSenderBase email = new EmailSender();
-        MessageSenderBase queue = new MsmqSender();
-        MessageSenderBase web = new WebServiceSender();
+        AbstractMessageSender email = new EmailSender();
+        AbstractMessageSender queue = new MsmqSender();
+        AbstractMessageSender web = new WebServiceSender();
 
         Message message = new Message(email, "Error", "an error occured", 1);
         message.send();
