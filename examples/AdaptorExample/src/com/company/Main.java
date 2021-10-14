@@ -12,14 +12,24 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-
         // The code below doesn't work
-        //ContactsPrinter.printContacts(new ContactsLibrary());
-
-        //ContactsLibrary contactsLibrary = new ContactsLibrary();
-        ContactsLibraryAdapter adapter = new ContactsLibraryAdapter();
-
-        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
-        contactsPrinter.printContacts();
+        ContactsPrinter.printContacts(new ContactsLibrary());
     }
+
+
+    /** Solution 1 : with inheritance */
+//    public static void main(String[] args) {
+//        ContactsLibraryAdapter adapter = new ContactsLibraryAdapter();
+//        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
+//        contactsPrinter.printContacts();
+//    }
+
+    /** Solution 2 : with composition */
+//    public static void main(String[] args) {
+//        ContactsLibrary contactsLibrary = new ContactsLibrary();
+//        ContactsLibraryAdapter adapter = new ContactsLibraryAdapter(contactsLibrary);
+//        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
+//        contactsPrinter.printContacts();
+//    }
+
 }

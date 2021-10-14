@@ -1,6 +1,6 @@
 package com.company;
 
-public class NumberMultiplier extends CalculatorBase {
+public class Calculator extends CalculatorBase {
 
     @Override
     public int calculate() {

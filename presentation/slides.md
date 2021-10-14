@@ -1,19 +1,19 @@
 # Design Patterns
 
+## Difference between principles (SOLID) vs. patterns
 
-## Différence entre principes (SOLID) et patterns 
+### SOLID principles
 
-### Principe 
-
-- Plus générique
-- Façon d'organiser l'ensemble de son application (ensemble de classes, modules, dépendences…)
+- They are generic
+- It's a philosophical way to design the architecture of your application code (how to build and organize classes, modules, dependencies…)
 
 ### Design Pattern
 
-- Propositions d'abstractions générales pour résoudre des problèmes récurrents au développement logiciel
-- Clé en main, réutilisable, testé et approuvé
-- Un design pattern = un problème et une solution précise
-- Sont un des moyens d'appliquer les principes SOLID
+- They are concrete proposition of piece of software architecture, designed to solve recurring problems one can find in software development
+- You can use them out of the box, they are tested and approved for a long time
+- One design pattern = one solution to one specific problem
+- They are a way to build software that respect the SOLID principles
+
 
 ---
 
@@ -50,11 +50,12 @@
 
 ---
 
-# Dans ce cours
+# In this lecture
 
-- Les design patterns proposé par le Gang Of Four (GoF)
-- Livre paru en 1994 "Design Patterns: Elements of Reusable Object-Oriented Software"
-- Auteurs : 
+
+- The design patterns presented here were published by the "Gang Of Four", that is a collective of authors
+- The book was published in 1994 "Design Patterns: Elements of Reusable Object-Oriented Software"
+- Authors : 
     - Erich Gamma
     - Richard Helm
     - Ralph Johnson
@@ -62,22 +63,21 @@
 
 ---
 
-# Quelques ressources externes
+# Some external resources
 
-Les design patterns du GoF sont très répandus, donc il est facile de trouver des ressources en ligne pour s'en imprégner (en 
-complément du cours).
+These design patterns are widespread, it is easy to fin online resources that describe and explain them in different ways.
 
-Quelques ressources en anglais : 
+Below, a compilation of some of these resources : 
 
-- Tutoriels Youtube par Derek Banas <https://www.youtube.com/playlist?list=PLF206E906175C7E07>
-- Chaque pattern détaillé avec un example Java et son diagramme UML : <https://www.journaldev.com/31902/gangs-of-four-gof-design-patterns>
-- Une présentation plus générique des patterns, avec diagrammes UML génériques : <http://www.blackwasp.co.uk/gofpatterns.aspx>
-- Voir le PDF "GangOfFour_reference.pdf" dans le repo du cours, pour un récapitulatif synthétique
-- Autre site avec les DP présentés différements, avec examples : <https://www.oodesign.com/proxy-pattern.html>
+- Youtube tutorials by Derek Banas <https://www.youtube.com/playlist?list=PLF206E906175C7E07>
+- Every pattern detailed with a Java example and a UML diagram : <https://www.journaldev.com/31902/gangs-of-four-gof-design-patterns>
+- A generic presentation of patterns with UML diagrams : <http://www.blackwasp.co.uk/gofpatterns.aspx>
+- In the lecture git repository, you will a document "GangOfFour_reference.pdf"
+- Another presentation of the patterns, with examples : <https://www.oodesign.com/proxy-pattern.html>
 
 ---
 
-# Commençons par un exemple concret
+# Let's begin with a concrete example
 
 We have a program that displays the names and phones of a list of people. We rely on an interface `PhoneListInterface` that defines
 a methode `Array<Phone> getPhoneList()`, the object `Phone` is one of our classes.
@@ -94,7 +94,7 @@ We solve this problem by writting a class to make some "translation" between the
 
 --- 
 
-# Les 3 familles de patterns
+# The 3 families of Design Patterns
 
 
 ## Creational Patterns
@@ -112,9 +112,9 @@ Most of these design patterns are specifically concerned with communication betw
 
 ---
 
-# Une autre catégorisation des patterns
+# Another way to classify : by scope
 
-Classification par Scope (orthogonal aux familles)
+This classification is orthogonal to the classification by families.
 
 ## Class patterns
 
@@ -126,9 +126,8 @@ Deal with object relationships (instances) which can be changed at run time.
 
 ---
 
-# Tableau récapitulatif
+# Summary table of Design Patterns classification
 
-Classement des design patterns par famille et par scope
 
 ![alt text](./imgs/dp_classification.jpg)
 
@@ -205,7 +204,7 @@ The intent of this pattern is to decouple abstraction from implementation so tha
 
 # Bridge
 
-- See the example in `./examples/BridgeExample`
+- See the example in `./examples/BridgeExample2`
 - Do the exercise in `./exercises/BridgeExercises`
 
 ---

@@ -4,25 +4,40 @@ public class Main {
 
     public static void main(String[] args) {
         // create a new window
-
-        System.out.println("Rendering my concrete window : ");
-        Window window = new ConcreteWindow();
+        System.out.println("Rendering my simple window : ");
+        Window window = new SimpleWindow(50);
         window.renderWindow();
-        System.out.println("==============\n\n");
 
-        // at some point later
-        // maybe text size becomes larger than the window
-        // thus the scrolling behavior must be added
 
-        // decorate old window
-        System.out.println("Rendering my concrete window, decorated with scrollbar s: ");
-        window = new ScrollableWindow(window);
+        // at some point later, we want to add a functionality, add a header
+        // to some windows, without modifying the SimpleWidow class
 
-        //  now window object
-        // has additional behavior / state
-
-        window.renderWindow();
+        // The behaviour must be modified at runtime
     }
+
+
+    /** Solution main */
+//    public static void main(String[] args) {
+//        // create a new window
+//
+//        System.out.println("Rendering my simple window : ");
+//        Window window = new SimpleWindow(50);
+//        window.renderWindow();
+//
+//
+//        // at some point later, we want to add a functionality, add a header
+//        // to some windows, without modifying the SimpleWidow class
+//
+//
+//        // decorate old window
+//        System.out.println("Rendering my window, decorated with a header : \n");
+//        window = new WindowWithHeader(window, "My Application");
+//
+//        //  now window object
+//        // has additional behavior / state
+//
+//        window.renderWindow();
+//    }
 }
 
 

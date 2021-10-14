@@ -6,7 +6,6 @@ package com.company;
  * Component window
  */
 public interface Window {
-
     public void renderWindow();
-
+    public int getWidth();
 }
