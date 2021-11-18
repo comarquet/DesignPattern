@@ -297,3 +297,35 @@ In writing an application of any kind, it often happens that the event generated
 # Chain of Responsibility
 
 ![](./imgs/chain_of_responsibility_uml.png)
+
+---
+
+# Creationnal Patterns
+
+- Singleton
+- Factory
+- Prototype
+
+
+---
+
+# Singleton
+
+## Motivation
+
+Sometimes it's important to have only one instance for a class. For example, in a system there should be only one window manager 
+(only a file system or only a print spooler). Usually singletons are used for centralized management of internal or external 
+resources and they provide a global point of access to themselves.
+
+## Intent
+
+- Ensure that only one instance of a class is created.
+- Provide a global point of access to the object.
+
+---
+
+# Singleton
+
+![](./imgs/singleton_uml.png)
+
+---
