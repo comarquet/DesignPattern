@@ -1,5 +1,6 @@
-package com.solution;
+package com.company;
 
+import com.company.DecoratedWindow;
 import com.company.Window;
 
 public class WindowWithHeader extends DecoratedWindow {
@@ -16,7 +17,7 @@ public class WindowWithHeader extends DecoratedWindow {
 
     @Override
     public void renderWindow() {
-        // render scroll bar
+        // render header
         renderHeader();
 
         // render decorated window

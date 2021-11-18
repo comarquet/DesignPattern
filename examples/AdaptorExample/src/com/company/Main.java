@@ -13,8 +13,20 @@ public class Main {
      */
     public static void main(String[] args) {
         // The code below doesn't work
-        ContactsPrinter.printContacts(new ContactsLibrary());
+        ContactsLibraryAdapterWithComposition adapter = new ContactsLibraryAdapterWithComposition(new ContactsLibrary());
+        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
+        contactsPrinter.printContacts();
     }
+
+
+
+
+
+
+
+
+
+
 
 
     /** Solution 1 : with inheritance */

@@ -1,3 +1,6 @@
+import drawing.drivers.AbstractDrawingDriver;
+import drawing.drivers.OSXDrawingDriver;
+import drawing.drivers.WindowsDrawingDriver;
 import forms.Circle;
 import forms.Triangle;
 import system.SystemInfo;
@@ -11,6 +14,8 @@ public class Main {
   public static void main(String[] args) {
     try {
       SystemOS mySystem = SystemInfo.getCurrentOS();
+
+
       /* The system is determined at run time, this program needs to work with mySystem string
        * having "Windows" or "OSX" as value.
        *
@@ -22,9 +27,16 @@ public class Main {
        *
        * Use the Bridge pattern to implement a solution to this problem.
        */
+      AbstractDrawingDriver drawingDriver;
+      if (mySystem == SystemOS.OSX) {
+        drawingDriver = new OSXDrawingDriver();
+      } else {
+        drawingDriver = new WindowsDrawingDriver();
+      }
 
-      Circle c = new Circle(2, 3, 5);
-      Triangle t = new Triangle(2, 7, 1);
+
+      Circle c = new Circle(drawingDriver, 2, 3, 5);
+      Triangle t = new Triangle(drawingDriver, 2, 7, 1);
 
 
       c.drawForm();

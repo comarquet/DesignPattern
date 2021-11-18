@@ -1,6 +1,6 @@
 package com.company;
 
 public abstract class AbstractMessageSender {
-    public abstract void SendMessage(String title, String details, int importance);
+    public abstract void sendMessage(String title, String details, int importance);
 }
 

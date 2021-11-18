@@ -21,7 +21,7 @@ public class Main {
                 "Error",
                 "An error occured",
                 1,
-                "Crashed whenn I clicked submit"
+                "Crashed when I clicked submit"
         );
 
         userEdited.setMessageSender(email);

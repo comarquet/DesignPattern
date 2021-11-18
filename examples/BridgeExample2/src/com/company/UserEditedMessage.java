@@ -16,6 +16,6 @@ public class UserEditedMessage extends Message {
     @Override
     public void send() {
         String fullBody = this.body + "\nCOMMENTS\n==========\n" + this.userComments;
-        this.messageSender.SendMessage(this.title, fullBody, this.importance);
+        this.messageSender.sendMessage(this.title, fullBody, this.importance);
     }
 }

@@ -1,9 +1,8 @@
 package com.company;
 
 public class Message {
-
-
     protected AbstractMessageSender messageSender;
+
     protected String title;
     protected String body;
     protected int importance;
@@ -24,7 +23,7 @@ public class Message {
     }
 
     public void send() {
-        this.messageSender.SendMessage(this.title, this.body, this.importance);
+        this.messageSender.sendMessage(this.title, this.body, this.importance);
     };
 
     public AbstractMessageSender getMessageSender() {

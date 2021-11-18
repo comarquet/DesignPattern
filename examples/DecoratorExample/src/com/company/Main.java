@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         // create a new window
         System.out.println("Rendering my simple window : ");
+
+
         Window window = new SimpleWindow(50);
         window.renderWindow();
 
@@ -13,7 +15,21 @@ public class Main {
         // to some windows, without modifying the SimpleWidow class
 
         // The behaviour must be modified at runtime
+        System.out.println("\n\n\n\n");
+        Window windowWithHeader = new WindowWithHeader(window, "My application");
+        windowWithHeader.renderWindow();
+
+
     }
+
+
+
+
+
+
+
+
+
 
 
     /** Solution main */

@@ -9,7 +9,7 @@ import system.SystemOS;
 /**
  * This is the service that allows to draw basic forms on Windows platform
  */
-public class WindowsDrawingDriver {
+public class WindowsDrawingDriver extends AbstractDrawingDriver {
 
   public void drawLine(int x, int y) throws Exception {
     this.checkOS();

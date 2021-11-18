@@ -1,19 +1,19 @@
 package com.company;
 
+import com.solution.ObserverLogger;
+
 public class Main {
 
     public static void main(String[] args) {
-        EventController eventController = new EventController();
+        ObservableEventController eventController = new ObservableEventController();
 
-        EventObserver emailer = new EventEmailer();
+        AbstractEventObserver emailer = new ObserverEmailer();
         eventController.attach(emailer);
 
-        EventObserver logger = new EventLogger();
+        AbstractEventObserver logger = new ObserverLogger();
         eventController.attach(logger);
 
-
-
-        eventController.sendEvent("Message with two observers.");
+        eventController.sendEvent("Customer #123 ordered product #455");
     }
 }
 

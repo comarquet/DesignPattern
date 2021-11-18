@@ -6,7 +6,7 @@ import system.SystemOS;
 /**
  *  This is the service that allows to draw basic forms on OSX platform
  */
-public class OSXDrawingDriver  {
+public class OSXDrawingDriver extends AbstractDrawingDriver {
         public void drawLine(int x, int y) throws Exception {
             this.checkOS();
             System.out.println("OSX : Ligne (" + x + ", " + y  + ")");

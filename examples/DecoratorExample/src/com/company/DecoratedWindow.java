@@ -1,4 +1,4 @@
-package com.solution;
+package com.company;
 
 import com.company.Window;
 
