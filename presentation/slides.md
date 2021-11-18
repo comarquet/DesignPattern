@@ -329,3 +329,23 @@ resources and they provide a global point of access to themselves.
 ![](./imgs/singleton_uml.png)
 
 ---
+
+# Factory Method
+
+## Motivation
+
+The factory design pattern is used when we have a superclass with multiple sub-classes and based on input, we need to return one of the sub-class. 
+This pattern takes out the responsibility of the instantiation of a class from the client program to the factory class.
+
+## Intent
+
+- Defines an interface for creating objects, but let subclasses to decide which class to instantiate
+
+
+---
+
+# Factory Method
+
+![](./imgs/factory_uml.png)
+
+---
