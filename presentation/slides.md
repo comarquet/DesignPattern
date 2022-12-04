@@ -39,6 +39,9 @@
 
 - A design pattern provides a scheme for refining the subsystems or components of a software system, or the relation ships between them. It describes a commonly-recurring structure of  communicating components that solves a general design problem within a particular context. 
 
+---
+
+
 ## Architectural Patterns
 
 - fundamental structural organization schema for software systems. It provides a set of predefined subsystems, their responsibilities,  and includes rules and guidelines for organizing the relationships between them. 
@@ -92,7 +95,7 @@ It does what we want, but the signature of the method doesn't match with our int
 
 We solve this problem by writting a class to make some "translation" between the two piece of softwares, which we call `PhoneListAdapter`.
 
---- 
+---
 
 # The 3 families of Design Patterns
 
@@ -153,6 +156,7 @@ The adapter pattern is adapting between classes and objects. Like any adapter in
 - Convert the interface of a class into another interface clients expect.
 - Adapter lets classes work together, that could not otherwise because of incompatible interfaces.
 
+
 ![](./imgs/adapter_uml.png)
 
 ---
@@ -176,6 +180,10 @@ Extending an object's functionality can be done statically (at compile time) by 
 
 The intent of this pattern is to add additional responsibilities dynamically to an object.
 
+---
+
+# Decorator Pattern
+
 ![](./imgs/decorator_uml.png)
 
 ---
@@ -197,6 +205,10 @@ Sometimes an abstraction should have different implementations; consider an obje
 ## Intent
 
 The intent of this pattern is to decouple abstraction from implementation so that the two can vary independently
+
+---
+
+# Bridge
 
 ![](./imgs/bridge_uml.png)
 
@@ -220,6 +232,10 @@ The proxy design pattern is used to provide a surrogate or placeholder object, w
 # Intent
 
 The intent of this pattern is to provide a Placeholder for an object to control references to it
+
+---
+
+# Proxy
 
 ![](./imgs/proxy_uml.png)
 
@@ -253,14 +269,15 @@ One of the most common data structures in software development is what is generi
 
 But what is more important is that a collection should provide a way to access its elements without exposing its internal structure. We should have a mechanism to traverse in the same way a list or an array. It doesn't matter how they are internally represented. 
 
+---
+
+# Iterator pattern 
+
 ## Intent
 
 - Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation. 
 - The abstraction provided by the iterator pattern allows you to modify the collection implementation without making any changes outside of collection
 
----
-
-# Iterator pattern 
 
 ![](./imgs/iterator_uml.png)
 
@@ -276,6 +293,10 @@ The cases when certain objects need to be informed about the changes occured in 
 ## Intent
 
 Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+---
+
+# Observer Pattern
 
 ![](./imgs/observer_uml.png)
 
