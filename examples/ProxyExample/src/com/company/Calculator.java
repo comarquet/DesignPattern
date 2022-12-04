@@ -1,18 +1,25 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Calculator extends CalculatorBase {
 
-    @Override
-    public int calculate() {
-        int result = 1;
-        for (int i = 2; i <= 10; i++) {
-            result *= i;
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+
+    /**
+     * This function returns the list of prime number factors for the given input number
+     * @param n
+     * @return
+     */
+    public List<Long> getPrimeNumberFactors(Long n) {
+        ArrayList<Long> resultArray = new ArrayList<>();
+        for (long i = 2; i <= n; i++) {
+            while (n % i == 0) {
+                resultArray.add(i);
+                n = n / i;
             }
         }
-        return result;
+        return resultArray;
     }
 }
+
