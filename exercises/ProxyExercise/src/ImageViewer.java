@@ -1,5 +1,6 @@
 public class ImageViewer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
         // assuming that the user selects a folder that has 3 images
         // consider using the high resolution image object directly
         Image highResolutionImage1 = new HighResolutionImage("sample/veryHighResPhoto1.jpeg");
