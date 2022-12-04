@@ -26,11 +26,9 @@ public class Main {
      */
 
     ILogger logger = new FileLogger();
-    HTMLLoggerDecorator htmlLogger = new HTMLLoggerDecorator(logger);
 
-
-    htmlLogger.log("Hello");
-    htmlLogger.log("World");
+    logger.log("Hello");
+    logger.log("World");
   }
   
 }
