@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Rendering my simple window : ");
 
 
-        Window window = new SimpleWindow(50);
+        AbstractWindow window = new SimpleWindow(50);
         window.renderWindow();
 
 
@@ -16,7 +16,7 @@ public class Main {
 
         // The behaviour must be modified at runtime
         System.out.println("\n\n\n\n");
-        Window windowWithHeader = new WindowWithHeader(window, "My application");
+        AbstractWindow windowWithHeader = new WindowWithHeader(window, "My application");
         windowWithHeader.renderWindow();
 
 
@@ -37,7 +37,7 @@ public class Main {
 //        // create a new window
 //
 //        System.out.println("Rendering my simple window : ");
-//        Window window = new SimpleWindow(50);
+//        AbstractWindow window = new SimpleWindow(50);
 //        window.renderWindow();
 //
 //

@@ -1,16 +1,13 @@
 package com.company;
 
-import com.company.DecoratedWindow;
-import com.company.Window;
-
-public class WindowWithHeader extends DecoratedWindow {
+public class WindowWithHeader extends AbstractDecoratedWindow {
 
     /**
      * Additional State
      */
     private String windowTitle;
 
-    public WindowWithHeader(Window windowReference, String windowTitle) {
+    public WindowWithHeader(AbstractWindow windowReference, String windowTitle) {
         super(windowReference);
         this.windowTitle = windowTitle;
     }

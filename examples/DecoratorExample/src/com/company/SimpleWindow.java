@@ -1,11 +1,11 @@
 package com.company;
 
 /**
- * Window implementation
+ * AbstractWindow implementation
  * <p>
  * Concrete implementation
  */
-public class SimpleWindow implements Window {
+public class SimpleWindow extends AbstractWindow {
 
     private int width;
 

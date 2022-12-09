@@ -1,14 +1,12 @@
 package com.company;
 
-import com.company.Window;
-
-public class DecoratedWindow implements Window {
+public abstract class AbstractDecoratedWindow extends AbstractWindow {
     /**
      * private reference to the window being decorated
      */
-    protected Window windowReference = null;
+    protected AbstractWindow windowReference = null;
 
-    public DecoratedWindow(Window windowReference) {
+    public AbstractDecoratedWindow(AbstractWindow windowReference) {
         this.windowReference = windowReference;
     }
 
