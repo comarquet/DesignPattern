@@ -3,35 +3,29 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        // this program needs a persistence framework
-        // at runtime  an implementor is chosen between file system implementation and
-        //database implememtor , depending on existence of databse drivers
+        AbstractMessageSender email = new EmailSender();
+        AbstractMessageSender queue = new MsmqSender();
+        AbstractMessageSender web = new WebServiceSender();
+
+        Message message = new Message(email, "Error", "an error occured", 1);
+        message.send();
 
 
-        PersistenceImplementor implementor = null;
-        if(databaseDriverExists()) {
-            implementor = new DabatasePersistenceImplementor();
-        } else {
-            implementor = new FileSystemPersistenceImplementor();
-        }
+        message.setMessageSender(queue);
+        message.send();
 
-        Persistence persistenceAPI = new PersistenceImp(implementor);
-        Object o = persistenceAPI.findById("12343755");
+        message.setMessageSender(web);
+        message.send();
 
-        // do changes to the object
-        // then persist
-        persistenceAPI.persist(o);
+        UserEditedMessage userEdited = new UserEditedMessage(
+                "Error",
+                "An error occured",
+                1,
+                "Crashed when I clicked submit"
+        );
 
-        // can also change implementor
-        persistenceAPI = new PersistenceImp(new DabatasePersistenceImplementor());
-        persistenceAPI.deleteById("2323");
-    }
-
-    private static boolean databaseDriverExists() {
-        return false;
+        userEdited.setMessageSender(email);
+        userEdited.send();
     }
 }
-
-
-
 
