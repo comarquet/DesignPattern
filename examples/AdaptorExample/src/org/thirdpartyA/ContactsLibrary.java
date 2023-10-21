@@ -1,4 +1,4 @@
-package org.thirdparty;
+package org.thirdpartyA;
 
 import java.util.LinkedHashMap;
 

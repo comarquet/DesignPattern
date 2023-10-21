@@ -1,6 +1,8 @@
-package com.company;
+package org.thirdpartyB;
 
-import java.util.AbstractList;
+import com.company.Contact;
+
+import java.util.List;
 
 public class ContactsPrinter {
     private ContactsGetterInterface contactsGetter;
@@ -10,7 +12,7 @@ public class ContactsPrinter {
     }
 
     public void printContacts() {
-        AbstractList<Contact> contacts = this.contactsGetter.getContacts();
+        List<Contact> contacts = this.contactsGetter.getContacts();
         for (Contact contact : contacts) {
             System.out.println("Name : " + contact.getName() + ", phone : " + contact.getPhone());
         }

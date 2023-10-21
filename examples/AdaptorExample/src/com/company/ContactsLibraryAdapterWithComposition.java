@@ -1,7 +1,7 @@
 package com.company;
 
-import com.solution.implementations.ContactsLibraryAdapter2;
-import org.thirdparty.ContactsLibrary;
+import org.thirdpartyA.ContactsLibrary;
+import org.thirdpartyB.ContactsGetterInterface;
 
 import java.util.AbstractList;
 import java.util.ArrayList;

@@ -1,6 +1,8 @@
 package com.company;
 
-import org.thirdparty.ContactsLibrary;
+import org.thirdpartyA.ContactsLibrary;
+import org.thirdpartyB.ContactsGetterInterface;
+import org.thirdpartyB.ContactsPrinter;
 
 public class Main {
 
@@ -13,8 +15,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // The code below doesn't work
-        ContactsLibraryAdapterWithComposition adapter = new ContactsLibraryAdapterWithComposition(new ContactsLibrary());
-        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
+        ContactsLibrary contactsLibrary = new ContactsLibrary();
+        ContactsPrinter contactsPrinter = new ContactsPrinter(contactsLibrary);
         contactsPrinter.printContacts();
     }
 
@@ -31,7 +33,7 @@ public class Main {
 
     /** Solution 1 : with inheritance */
 //    public static void main(String[] args) {
-//        ContactsLibraryAdapter adapter = new ContactsLibraryAdapter();
+//        ContactsGetterInterface adapter = new ContactsLibraryAdapter();
 //        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
 //        contactsPrinter.printContacts();
 //    }
@@ -39,7 +41,7 @@ public class Main {
     /** Solution 2 : with composition */
 //    public static void main(String[] args) {
 //        ContactsLibrary contactsLibrary = new ContactsLibrary();
-//        ContactsLibraryAdapter adapter = new ContactsLibraryAdapter(contactsLibrary);
+//        ContactsGetterInterface adapter = new ContactsLibraryAdapter(contactsLibrary);
 //        ContactsPrinter contactsPrinter = new ContactsPrinter(adapter);
 //        contactsPrinter.printContacts();
 //    }
