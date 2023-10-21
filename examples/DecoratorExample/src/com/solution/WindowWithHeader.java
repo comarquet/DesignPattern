@@ -1,4 +1,4 @@
-package com.company;
+package com.solution;
 
 public class WindowWithHeader extends AbstractDecoratedWindow {
 
