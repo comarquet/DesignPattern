@@ -1,4 +1,6 @@
-package com.company;
+package com.goodExample.message;
+
+import com.goodExample.sender.AbstractMessageSender;
 
 public class Message {
     protected AbstractMessageSender messageSender;

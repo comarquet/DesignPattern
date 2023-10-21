@@ -1,4 +1,4 @@
-package com.company;
+package com.goodExample.sender;
 
 public class EmailSender extends AbstractMessageSender {
     @Override

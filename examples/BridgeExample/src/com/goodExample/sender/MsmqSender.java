@@ -1,4 +1,4 @@
-package com.company;
+package com.goodExample.sender;
 
 public class MsmqSender extends AbstractMessageSender {
     @Override
