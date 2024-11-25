@@ -1,20 +1,27 @@
 package com.company;
 
+import com.company.handlers.AbstractRequestHandler;
+import com.company.handlers.CheckInStoreProductRequestHandler;
+import com.company.handlers.LoggingProductRequestHandler;
+import com.company.handlers.NegativeQuantityProductRequestHandler;
+import com.company.model.ProductRequest;
+
 public class Main
 {
     public static void main(String[] args)
     {
         // Setup Chain of Responsibility
-        AbstractRequestHandler h1 = new NegativeQuantityProductRequestHandler();
-        AbstractRequestHandler h2 = new CheckInStoreProductRequestHandler();
-        AbstractRequestHandler h3 = new LoggingProductRequestHandler();
+        AbstractRequestHandler hNegativeRequest = new NegativeQuantityProductRequestHandler();
+        AbstractRequestHandler hInStore = new CheckInStoreProductRequestHandler();
+        AbstractRequestHandler hLogger = new LoggingProductRequestHandler();
 
-        h1.setSuccessor(h2);
-        h2.setSuccessor(h3);
+        hLogger.setSuccessor(hNegativeRequest);
+        hNegativeRequest.setSuccessor(hInStore);
+
 
         // Send requests to the chain
-        h1.handleRequest(new ProductRequest( "FORK", -1));
-        h1.handleRequest(new ProductRequest( "PLATE", 2));
-        h1.handleRequest(new ProductRequest( "KNIFE", 2));
+        hLogger.handleRequest(new ProductRequest( "FORK", -1));
+        hLogger.handleRequest(new ProductRequest( "PLATE", 2));
+        hLogger.handleRequest(new ProductRequest( "KNIFE", 2));
     }
 }

@@ -1,4 +1,6 @@
-package com.company;
+package com.company.handlers;
+
+import com.company.model.ProductRequest;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

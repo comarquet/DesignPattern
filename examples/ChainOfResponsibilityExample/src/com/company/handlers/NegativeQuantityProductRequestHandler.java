@@ -1,4 +1,6 @@
-package com.company;
+package com.company.handlers;
+
+import com.company.model.ProductRequest;
 
 public class NegativeQuantityProductRequestHandler extends AbstractRequestHandler {
     /* This handler checks if the quantity of a product request is negative */
