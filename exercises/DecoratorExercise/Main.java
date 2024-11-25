@@ -6,7 +6,8 @@ public class Main {
   public static void main(String[] args) {
 
     /*
-     * We have a ILogger interface, that allow to use a logging service, it provides a log() method.
+     * We have an AbstractLogger class definition, that allow to use a logging service, it specifies that
+     * concrete implementation should have a log() method.
      *
      * Right now we have a simple FileLogger, which prints logs in a text file, each logged message on a new line
      *
@@ -25,7 +26,7 @@ public class Main {
      *
      */
 
-    ILogger logger = new FileLogger();
+    AbstractLogger logger = new FileLogger();
 
     logger.log("Hello");
     logger.log("World");

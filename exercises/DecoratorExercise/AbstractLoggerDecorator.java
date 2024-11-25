@@ -1,3 +1,4 @@
-public abstract class AbstractLoggerDecorator implements ILogger{
+
+public abstract class AbstractLoggerDecorator extends AbstractLogger {
 
 }

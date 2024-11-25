@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 /**
  * Service de log dans un fichier (ConcreteComponent)
  */
-public class FileLogger implements ILogger {
+public class FileLogger extends AbstractLogger {
   
   public synchronized void log(String msg) {
     try {
