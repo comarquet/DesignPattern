@@ -3,9 +3,9 @@ public class ImageViewer {
 
         // assuming that the user selects a folder that has 3 images
         // consider using the high resolution image object directly
-        Image highResolutionImage1 = new HighResolutionImage("sample/veryHighResPhoto1.jpeg");
-        Image highResolutionImage2 = new HighResolutionImage("sample/veryHighResPhoto2.jpeg");
-        Image highResolutionImage3 = new HighResolutionImage("sample/veryHighResPhoto3.jpeg");
+        AbstractImage highResolutionImage1 = new HighResolutionImage("sample/veryHighResPhoto1.jpeg");
+        AbstractImage highResolutionImage2 = new HighResolutionImage("sample/veryHighResPhoto2.jpeg");
+        AbstractImage highResolutionImage3 = new HighResolutionImage("sample/veryHighResPhoto3.jpeg");
 
         // assume that the user clicks on Image one item in a list
         // this would cause the program to call showImage() for that image only

@@ -2,7 +2,7 @@
 /**
  * RealSubject
  */
-public class HighResolutionImage implements Image {
+public class HighResolutionImage extends AbstractImage {
     private String loadedImage = "Nothing to display :(";
 
     public HighResolutionImage(String imageFilePath) {
