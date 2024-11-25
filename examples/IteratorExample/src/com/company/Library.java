@@ -18,6 +18,4 @@ public class Library implements IterableCollectionInterface {
     public IteratorInterface<Book> getIterator() {
         return new LibraryIterator(this);
     }
-
-
 }
