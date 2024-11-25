@@ -1,13 +1,12 @@
 package com.solution;
 
 import com.company.Calculator;
-import com.company.CalculatorBase;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CalculatorCacheProxy extends CalculatorBase {
+public class CalculatorCacheProxy extends AbstractCalculator {
     private Calculator realCalculator;
     private Map<Long, List<Long>> cachedResults = new HashMap<>();
 
