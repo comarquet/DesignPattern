@@ -12,6 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
 
+
         // Example on how to navigate a ResultSet object
         ResultSet resultSet = LibDBUsersExtractor.extractUsersFromDB();
 
@@ -24,14 +25,16 @@ public class Main {
         }
 
 
+
+
         // we want to generate a CSV list of all users that are in the database,
-        // For this, you need to use the 2 provided librairies libDBUsersExtractor
+        // For this, you need to use the 2 provided libraries libDBUsersExtractor
         // and libCSVUserPrinter. Of course, you can't modify the library code.
         // Use the Adapter Design Pattern in order to sort the compatibility issue
-        // between these two librairies.
+        // between these two libraries.
 
-        // 1. Use the pattern with composition first
-        // 2. If you are succesfull, you can rewrite it with the pattern with inheritence
+        // Use the adapter pattern with composition (the one with inheritance
+        // is a bit more complicated)
 
 
     }
