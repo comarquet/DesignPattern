@@ -1,4 +1,4 @@
-public class HighResolutionImageProxy implements Image {
+public class HighResolutionImageProxy extends AbstractImage {
     private HighResolutionImage proxiedImage;
     private String imageFilePathCache;
 
