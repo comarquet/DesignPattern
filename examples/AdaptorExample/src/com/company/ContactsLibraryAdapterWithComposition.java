@@ -1,12 +1,10 @@
 package com.company;
 
 import org.thirdpartyA.ContactsLibrary;
+import org.thirdpartyB.Contact;
 import org.thirdpartyB.ContactsGetterInterface;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 /** Composition adapter */
 public class ContactsLibraryAdapterWithComposition implements ContactsGetterInterface {
@@ -19,7 +17,7 @@ public class ContactsLibraryAdapterWithComposition implements ContactsGetterInte
 
     @Override
     public AbstractList<Contact> getContacts() {
-        LinkedHashMap<String, String> contacts = this.contactsLibrary.fetchContacts();
+        Map<String, String> contacts = this.contactsLibrary.fetchContacts();
         ArrayList<Contact> results = new ArrayList<>();
 
         Iterator<String> iterator = contacts.keySet().iterator();

@@ -2,18 +2,16 @@ package com.company;
 
 
 import org.thirdpartyA.ContactsLibrary;
+import org.thirdpartyB.Contact;
 import org.thirdpartyB.ContactsGetterInterface;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 public class ContactsLibraryAdapterWithInheritance extends ContactsLibrary implements ContactsGetterInterface {
 
     @Override
-    public AbstractList<Contact> getContacts() {
-        LinkedHashMap<String, String> contacts = this.fetchContacts();
+    public List<Contact> getContacts() {
+        Map<String, String> contacts = this.fetchContacts();
         ArrayList<Contact> results = new ArrayList<>();
 
         Iterator<String> iterator = contacts.keySet().iterator();

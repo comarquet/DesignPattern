@@ -1,4 +1,4 @@
-package com.company;
+package org.thirdpartyB;
 
 public class Contact {
     public String getName() {

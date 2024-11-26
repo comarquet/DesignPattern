@@ -16,14 +16,10 @@ public class Main {
     public static void main(String[] args) {
         // The code below doesn't work
         ContactsLibrary contactsLibrary = new ContactsLibrary();
+
         ContactsPrinter contactsPrinter = new ContactsPrinter(contactsLibrary);
         contactsPrinter.printContacts();
     }
-
-
-
-
-
 
 
 
