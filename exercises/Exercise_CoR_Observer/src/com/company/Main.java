@@ -68,7 +68,8 @@ public class Main {
         existenceHandler.setSuccessor(policyHandler);
         policyHandler.setSuccessor(renderHandler);
         
-        WebServer webServer = new WebServer(existenceHandler);
+        WebServer realWebServer = new WebServer(existenceHandler);
+        WebServerProxy webServerProxy = new WebServerProxy(realWebServer, fileLogger);
         
         User regularUser = new User(false);
         User adminUser = new User(true);
@@ -77,25 +78,25 @@ public class Main {
          * Expected output :
          * Status 403 : user is not authorized to access this content
          */
-        webServer.getRequest(new WebRequest("/dashboard", regularUser));
+        webServerProxy.getRequest(new WebRequest("/dashboard", regularUser));
 
         /**
          * Expected output :
          * Status 404 : Page missing
          */
-        webServer.getRequest(new WebRequest("/dashboard/nonExistingPage", adminUser));
+        webServerProxy.getRequest(new WebRequest("/dashboard/nonExistingPage", adminUser));
 
         /**
          * Expected output :
          * Status 200 : Dashboard content here
          */
-        webServer.getRequest(new WebRequest("/dashboard", adminUser));
+        webServerProxy.getRequest(new WebRequest("/dashboard", adminUser));
 
         /**
          * Expected output :
          * Status 200 : Home content here
          */
-        webServer.getRequest(new WebRequest("/home", regularUser));
+        webServerProxy.getRequest(new WebRequest("/home", regularUser));
 
         /**
          * Expected content of file logs.txt
