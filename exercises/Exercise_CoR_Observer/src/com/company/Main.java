@@ -69,7 +69,6 @@ public class Main {
         policyHandler.setSuccessor(renderHandler);
         
         WebServer webServer = new WebServer(existenceHandler);
-        webServer.attach(fileLogger);
         
         User regularUser = new User(false);
         User adminUser = new User(true);
