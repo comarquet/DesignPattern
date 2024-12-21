@@ -59,9 +59,17 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        WebServer webServer = new WebServer();
-        FileLogger fileLogger = new FileLogger('logs.txt');
-
+        FileLogger fileLogger = new FileLogger("logs.txt");
+        
+        RequestHandler renderHandler = new RenderContentHandler();
+        RequestHandler policyHandler = new PolicyCheckRequestHandler();
+        RequestHandler existenceHandler = new ExistingContentCheckRequestHandler();
+        
+        existenceHandler.setSuccessor(policyHandler);
+        policyHandler.setSuccessor(renderHandler);
+        
+        WebServer webServer = new WebServer(existenceHandler);
+        
         User regularUser = new User(false);
         User adminUser = new User(true);
 
@@ -81,7 +89,7 @@ public class Main {
          * Expected output :
          * Status 200 : Dashboard content here
          */
-        webServer.getRequest(new WebRequest(("/dashboard", adminUser));
+        webServer.getRequest(new WebRequest("/dashboard", adminUser));
 
         /**
          * Expected output :

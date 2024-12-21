@@ -1,8 +1,14 @@
 package com.company;
 
 public class WebServer {
-    public String getRequest(WebRequest request) {
-        // TODO
-        return "";
+    private RequestHandler firstHandler;
+    
+    public WebServer(RequestHandler firstHandler) {
+        this.firstHandler = firstHandler;
     }
+    
+    public void getRequest(WebRequest request) {
+        firstHandler.handleRequest(request);
+    }
+    
 }
